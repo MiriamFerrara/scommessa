@@ -1,38 +1,313 @@
-.App {
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contenitore {
+  max-width: 800px;
+  margin: 20px auto;
+  border: 3px solid #0f0;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  width: 150px;
+  margin: 10px auto;
+  display: block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-size: 2rem;
+  color: orange;
+  margin-bottom: 10px;
+}
+
+.benvenuto {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: white;
+}
+
+.highlight {
+  color: orange;
+}
+
+.saldo {
+  color: orange;
+  font-weight: bold;
+}
+
+.sottotesto {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.vincente {
+  color: orange;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.cavalli {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.cavallo-card {
+  background-color: #222;
+  border-radius: 15px;
+  padding: 10px;
+  width: 130px;
+  min-height: 130px;
+  box-shadow: 0 0 10px #555;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transition: transform 0.2s;
+}
+
+.cavallo-card:hover {
+  transform: scale(1.05);
+}
+
+.scaccomatto-card {
+  width: 80%;
+  background-color: #400;
+  border: 2px solid red;
+  font-size: 1.5rem;
+}
+
+.emoji {
+  font-size: 2rem;
+}
+
+.barra {
+  height: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.nome-cavallo {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+  word-break: break-word;
+  text-align: center;
+}
+
+.scaccomatto-card .nome-cavallo {
+  font-size: 2rem;
+  color: red;
+}
+
+.giocata {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 40px 0 20px;
+}
+
+.giocata-titolo {
+  font-size: 1.5rem;
+  color: #f0f0f0;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Georgia', serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.giocata-input-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px; /* Spazio tra titolo e input */
+  margin: 0; /* rimuove spazio extra */
+}
+
+.input-importo {
+   padding: 5px 5px;
+   font-size: 1.5rem;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-importo:focus {
+  border-color: #ffaa33;
+  box-shadow: 0 0 10px rgba(255, 170, 51, 0.6);
+}
+
+.bottoni-colonna {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  width: 80%;
+}
+
+button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 100%;   /* Aggiungi questa */
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-verde {
+  background-color: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-verde:hover {
+  background-color: #3ed657;
+  color: black;
 }
 
-@keyframes App-logo-spin {
+.btn-arancio {
+  background-color: orange;
+  color: black;
+}
+
+.btn-arancio:hover {
+  background-color: #ffbb33;
+}
+
+.btn-reset {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-reset:hover {
+  background-color: #ff4d4d;
+}
+
+.altro-btn {
+  background-color: #444;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: 2px solid orange;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.altro-btn:hover {
+  background-color: orange;
+  color: black;
+}
+
+.corsa {
+  margin-top: 30px;
+}
+
+.cavallo-corsa {
+  padding: 10px;
+  margin: 5px auto;
+  width: 70%;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: #333;
+  color: black;
+  text-align: left;
+}
+
+.classifica {
+  margin-top: 30px;
+}
+
+.classifica ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+.classifica li {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.messaggio-perdita {
+  font-size: 1.5rem;
+  color: red;
+  margin-top: 20px;
+  font-weight: bold;
+}
+.pista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background: #111;
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.corsia {
+  position: relative;
+  height: 40px;
+  background-color: #222;
+  border: 1px solid #333;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.cavallo-animato {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  height: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: black;
+  animation: corsa 3.5s ease-out forwards;
+  border-radius: 20px;
+}
+
+.scacco-evidenziato {
+  font-size: 1.1em;
+  color: white;
+  text-shadow: 1px 1px 3px red;
+  border: 2px solid orange;
+}
+
+@keyframes corsa {
   from {
-    transform: rotate(0deg);
+    left: -100px;
   }
   to {
-    transform: rotate(360deg);
+    left: calc(100% - 120px);
   }
 }
