@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/scommessa/static/css/main.c1949d93.css",
+    "main.js": "/scommessa/static/js/main.1f6948af.js",
+    "static/js/453.7e0c42b1.chunk.js": "/scommessa/static/js/453.7e0c42b1.chunk.js",
+    "index.html": "/scommessa/index.html",
+    "main.c1949d93.css.map": "/scommessa/static/css/main.c1949d93.css.map",
+    "main.1f6948af.js.map": "/scommessa/static/js/main.1f6948af.js.map",
+    "453.7e0c42b1.chunk.js.map": "/scommessa/static/js/453.7e0c42b1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1949d93.css",
+    "static/js/main.1f6948af.js"
+  ]
+}
