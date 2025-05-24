@@ -89,10 +89,14 @@ h1 {
   background-color: #400;
   border: 2px solid red;
   font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .emoji {
-  font-size: 2rem;
+  font-size: 2rem; /* Potrebbe essere necessario un aggiustamento per le immagini */
 }
 
 .barra {
@@ -104,15 +108,24 @@ h1 {
 
 .nome-cavallo {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 22px;
   color: #fff;
-  word-break: break-word;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .scaccomatto-card .nome-cavallo {
-  font-size: 2rem;
-  color: red;
+  font-size: 30px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 8px;
 }
 
 .giocata {
@@ -139,15 +152,15 @@ h1 {
   display: flex;
   justify-content: center;
   width: 100%;
-  gap: 10px; /* Spazio tra titolo e input */
-  margin: 0; /* rimuove spazio extra */
+  gap: 10px;
+  margin: 0;
 }
 
 .input-importo {
-   padding: 5px 5px;
-   font-size: 1.5rem;
-   border-radius: 5px;
-   border: 1px solid #ccc;
+  padding: 5px 5px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
   outline: none;
   transition: all 0.3s ease;
 }
@@ -173,7 +186,7 @@ button {
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
-  width: 100%;   /* Aggiungi questa */
+  width: 100%;
 }
 
 button:hover {
@@ -223,21 +236,59 @@ button:hover {
   color: black;
 }
 
+/* === SEZIONE CORSA === */
 .corsa {
   margin-top: 30px;
 }
 
-.cavallo-corsa {
-  padding: 10px;
-  margin: 5px auto;
-  width: 70%;
-  border-radius: 10px;
-  font-size: 1.2rem;
-  background-color: #333;
-  color: black;
-  text-align: left;
+.pista {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 30px 0;
 }
 
+.corsia {
+  height: 50px;
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cavallo-animato {
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+  background-color: orange;
+  color: black;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  transition: width 1s ease-in-out;
+}
+
+
+.scacco-evidenziato {
+  font-size: 1.3rem;
+  background-color: red !important;
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes corsa {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 120px);
+  }
+}
+
+/* === SEZIONE CLASSIFICA === */
 .classifica {
   margin-top: 30px;
 }
@@ -256,58 +307,46 @@ button:hover {
   justify-content: center;
 }
 
+.classifica li:first-child::after {
+  content: " 🏆";
+  margin-left: 8px;
+}
+
 .messaggio-perdita {
   font-size: 1.5rem;
   color: red;
   margin-top: 20px;
   font-weight: bold;
 }
-.pista {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding: 20px;
-  background: #111;
-  border-radius: 10px;
+
+.risultati-sotto-gara {
   margin-top: 20px;
-  overflow: hidden;
+  text-align: center;
+}
+.barra-corsa {
+  margin-bottom: 10px;
 }
 
-.corsia {
-  position: relative;
-  height: 40px;
-  background-color: #222;
-  border: 1px solid #333;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.cavallo-animato {
-  position: absolute;
-  left: -100px;
-  top: 0;
-  height: 100%;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  color: black;
-  animation: corsa 3.5s ease-out forwards;
-  border-radius: 20px;
-}
-
-.scacco-evidenziato {
-  font-size: 1.1em;
+.nome-cavallo-corsa {
   color: white;
-  text-shadow: 1px 1px 3px red;
-  border: 2px solid orange;
+  margin-bottom: 4px;
+  font-weight: bold;
 }
 
-@keyframes corsa {
-  from {
-    left: -100px;
-  }
-  to {
-    left: calc(100% - 120px);
-  }
+.contenitore-barra {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 25px;
+  width: 100%;
+}
+
+.barra-avanzamento {
+  height: 100%;
+  text-align: right;
+  padding-right: 10px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  border-radius: 10px 0 0 10px;
 }
