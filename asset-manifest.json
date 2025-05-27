@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/scommessa/static/css/main.b94aac0a.css",
-    "main.js": "/scommessa/static/js/main.2239fcd1.js",
+    "main.js": "/scommessa/static/js/main.b1339a9e.js",
     "static/js/453.7e0c42b1.chunk.js": "/scommessa/static/js/453.7e0c42b1.chunk.js",
+    "static/media/logo-pigrecoemme.png": "/scommessa/static/media/logo-pigrecoemme.4bc11e050fc50cb3bb7d.png",
     "static/media/horse.png": "/scommessa/static/media/horse.151a46b49e27be90f5d8.png",
     "index.html": "/scommessa/index.html",
     "main.b94aac0a.css.map": "/scommessa/static/css/main.b94aac0a.css.map",
-    "main.2239fcd1.js.map": "/scommessa/static/js/main.2239fcd1.js.map",
+    "main.b1339a9e.js.map": "/scommessa/static/js/main.b1339a9e.js.map",
     "453.7e0c42b1.chunk.js.map": "/scommessa/static/js/453.7e0c42b1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b94aac0a.css",
-    "static/js/main.2239fcd1.js"
+    "static/js/main.b1339a9e.js"
   ]
 }
